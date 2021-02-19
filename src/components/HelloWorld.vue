@@ -1,33 +1,4 @@
 <template>
-  <h1>{{ msg }}</h1>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">Vite Documentation</a> |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
-  </p>
-
-  <p>
-    Recommended setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
-    +
-    <a
-      href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"
-      target="_blank"
-    >Vetur</a>
-    +
-    <a
-      href="https://marketplace.visualstudio.com/items?itemName=znck.vue-language-features"
-      target="_blank"
-    >Vue DX</a>
-  </p>
-  <p>
-    Make sure to use workspace version of TypeScript to get improved support via
-    <a
-      href="https://github.com/znck/vue-developer-experience"
-      target="_blank"
-    >@vuedx</a>.
-    <br />Note @vuedx is still experimental and this setup is provided for early feedback.
-  </p>
   <el-button @click="count++">count is: {{ count }}</el-button>
   <p>
     Edit
@@ -36,21 +7,38 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent, onMounted } from "vue";
 
 export default defineComponent({
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
     msg: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   setup: () => {
-    const count = ref(0)
-    return { count }
-  }
-})
+    const count = ref(0);
+
+    onMounted(() => {
+      console.log("qqq");
+
+      const url = "https://objectstorage.ap-tokyo-1.oraclecloud.com/n/nrs6ddnbfuvk/b/";
+      fetch(url, {
+        method: "GET", // *GET, POST, PUT, DELETE, etc.
+        mode: "cors", // no-cors, *cors, same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: "same-origin", // include, *same-origin, omit
+        headers: {
+          "Content-Type": "application/json",
+          "authorization": "Du_1fpHdAY4KQvNIE#6N"
+        },
+      });
+    });
+
+    return { count };
+  },
+});
 </script>
 
 <style scoped>

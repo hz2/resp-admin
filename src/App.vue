@@ -4,15 +4,28 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent } from "vue";
+import HelloWorld from "./components/HelloWorld.vue";
+
+import req from "@/utils/req";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-})
+    HelloWorld,
+  },
+  setup() {
+    req("/billboard/show", {
+      method: "GET",
+      params: {
+        page: 1,
+        size: 33,
+      },
+    }).then((resp: object) => {
+      console.log("resp", resp);
+    });
+  },
+});
 </script>
 
 <style>

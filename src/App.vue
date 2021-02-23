@@ -24,6 +24,16 @@ export default defineComponent({
     }).then((resp: object) => {
       console.log("resp", resp);
     });
+
+    req("/promotion/all", {
+      method: "GET",
+      params: {
+        page: 1,
+        size: 33,
+      },
+    }).then((resp: object) => {
+      console.log("resp", resp);
+    });
   },
 });
 </script>

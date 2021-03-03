@@ -16,7 +16,7 @@ export default defineComponent({
   },
   setup() {
 
-    console.log('process.env', process.env);
+    console.log('import.meta.env', import.meta.env);
     
     req("/billboard/show", {
       method: "GET",

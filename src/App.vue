@@ -15,6 +15,9 @@ export default defineComponent({
     HelloWorld,
   },
   setup() {
+
+    console.log('process.env', process.env);
+    
     req("/billboard/show", {
       method: "GET",
       params: {

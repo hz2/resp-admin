@@ -7,7 +7,7 @@
 import { defineComponent } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
 
-import req from "@/utils/req";
+import req from "./utils/req";
 
 export default defineComponent({
   name: "App",

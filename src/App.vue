@@ -7,7 +7,7 @@
 import { defineComponent } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
 
-import req from "@/utils/req";
+import req from "./utils/req";
 
 export default defineComponent({
   name: "App",
@@ -15,7 +15,20 @@ export default defineComponent({
     HelloWorld,
   },
   setup() {
+
+    console.log('process.env', process.env);
+    
     req("/billboard/show", {
+      method: "GET",
+      params: {
+        page: 1,
+        size: 33,
+      },
+    }).then((resp: object) => {
+      console.log("resp", resp);
+    });
+
+    req("/promotion/all", {
       method: "GET",
       params: {
         page: 1,

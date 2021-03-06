@@ -15,6 +15,10 @@ interface ReqObj {
     header?: object; // typo of headers
     methods?: string; // typo of method
 }
+
+
+
+
 const req = async (url = '', data: ReqObj = {}) => {
     const presetReqObj: ReqObj = {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.

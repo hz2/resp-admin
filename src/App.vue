@@ -18,25 +18,25 @@ export default defineComponent({
 
     console.log('import.meta.env', import.meta.env);
     
-    req("/billboard/show", {
-      method: "GET",
-      params: {
-        page: 1,
-        size: 33,
-      },
-    }).then((resp: object) => {
-      console.log("resp", resp);
-    });
+    // req("/billboard/show", {
+    //   method: "GET",
+    //   params: {
+    //     page: 1,
+    //     size: 33,
+    //   },
+    // }).then((resp: object) => {
+    //   console.log("resp", resp);
+    // });
 
-    req("/promotion/all", {
-      method: "GET",
-      params: {
-        page: 1,
-        size: 33,
-      },
-    }).then((resp: object) => {
-      console.log("resp", resp);
-    });
+    // req("/promotion/all", {
+    //   method: "GET",
+    //   params: {
+    //     page: 1,
+    //     size: 33,
+    //   },
+    // }).then((resp: object) => {
+    //   console.log("resp", resp);
+    // });
   },
 });
 </script>

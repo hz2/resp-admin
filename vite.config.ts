@@ -17,11 +17,11 @@ export default defineConfig({
       //   changeOrigin: true,
       //   rewrite: (path) => path.replace(new RegExp('^' + env.VITE_BASE_API), '')
       // },
-      "/api": {
-        target: "http://localhost:8999",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(new RegExp('^/api'), '')
-      }
+      // "/api": {
+      //   target: "http://localhost:8999",
+      //   changeOrigin: true,
+      //   rewrite: (path) => path.replace(new RegExp('^/api'), '')
+      // }
     }
   }
 })

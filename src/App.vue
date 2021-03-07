@@ -1,20 +1,14 @@
 <template>
   <router-view></router-view>
 </template>
-
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
-
-import req from "./utils/req";
+// import req from "./utils/req";
 
 export default defineComponent({
   name: "App",
-  components: {
-    HelloWorld,
-  },
   setup() {
-    console.log("import.meta.env", import.meta.env);
+    // console.log("import.meta.env", import.meta.env);
 
     // req("/billboard/show", {
     //   method: "GET",

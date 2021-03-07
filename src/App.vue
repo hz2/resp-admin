@@ -1,6 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <router-view></router-view>
 </template>
 
 <script lang="ts">
@@ -15,9 +14,8 @@ export default defineComponent({
     HelloWorld,
   },
   setup() {
+    console.log("import.meta.env", import.meta.env);
 
-    console.log('import.meta.env', import.meta.env);
-    
     // req("/billboard/show", {
     //   method: "GET",
     //   params: {

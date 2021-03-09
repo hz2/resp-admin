@@ -9,6 +9,6 @@ import store from "./store";
 import router from "./router";
 
 const app = createApp(App)
-app.use(ElementPlus, { size: 'small', zIndex: 3000 });
+app.use(ElementPlus, { size: 'medium', zIndex: 3000 });
 app.use(store).use(router)
 app.mount('#app')

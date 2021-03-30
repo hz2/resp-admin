@@ -13,9 +13,13 @@ const routes = [
         meta: {
             title: 'login'
         }
+    },
+    {
+        path: "/test",
+        name: 'test',
+        component: () => import('@/views/test.vue'),
     }
 ]
-
 
 
 
